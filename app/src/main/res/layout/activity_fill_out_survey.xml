@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".FillOutSurveyActivity">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="@string/surveys"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        tools:ignore="RelativeOverlap">
+
+        <TextView
+            android:textColor="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fill_out_survey" />
+
+        <TextView
+            android:id="@+id/tvNavViewSurvey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/view_survey_results" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LLPersonalDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHeader"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal_details" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_names" />
+
+            <EditText
+                android:id="@+id/edtFullNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/et_style"
+                android:inputType="textPersonName" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/et_style"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth" />
+
+            <EditText
+                android:id="@+id/edtDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/et_style"
+                android:inputType="textEmailAddress" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_number" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/et_style"
+                android:inputType="phone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llFavoriteFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LLPersonalDetails"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whats_is_your_favorite_food" />
+
+        <CheckBox
+            android:id="@+id/ckPizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pizza" />
+
+        <CheckBox
+            android:id="@+id/ckPasta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pasta" />
+
+        <CheckBox
+            android:id="@+id/ckPap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pap_and_wors" />
+
+        <CheckBox
+            android:id="@+id/ckOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/other" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llFavoriteFood"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/please_rate_your_level_of_agreement_on_a_scale_from_1_to_5_with_1_being_strongly_agree_and_5_being_strongly_disagree" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_height="match_parent"
+                android:background="@color/gry"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/runLabel"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/strongly_agree" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/agree" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/neutral" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/disagree" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/strongly_disagree" />
+
+
+            </TableRow>
+
+            <TableRow  android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_like_to_watch_movies" />
+
+                <RadioGroup android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/radGroupMoves">
+
+                    <RadioButton
+                        android:id="@+id/rbMovesStronglyAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbMovesAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbMovesNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbMovesDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbMovesStrongDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_like_to_listen_to_radio" />
+
+                <RadioGroup android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/radGroupRadio">
+
+                    <RadioButton
+                        android:id="@+id/rbRadioStrongAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbRadioAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbRadioNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbRadioDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbRadioStrongDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                </RadioGroup>
+
+
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_like_to_eat_out" />
+
+                <RadioGroup android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/radGroupEatOut">
+
+                    <RadioButton
+                        android:id="@+id/rbEatOutStrongAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbEatOutAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbEatOutNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbEatOutDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbEatOutStrongDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </RadioGroup>
+
+
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_like_to_watch_tv" />
+
+                <RadioGroup android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/radGroupTV">
+
+                    <RadioButton
+                        android:id="@+id/rbTVStrongAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbTVAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbTVNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbTVDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <RadioButton
+                        android:id="@+id/rbTVStrongDisagree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </RadioGroup>
+
+
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit" />
+
+
+</RelativeLayout>

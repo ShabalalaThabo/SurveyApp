@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.tshabalala.surveyapp" />
+                  <option name="mobileSdkAppId" value="1:212349002978:android:007dcbf823aa7d30902abb" />
+                  <option name="projectId" value="surveyapp1-b4e46" />
+                  <option name="projectNumber" value="212349002978" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
